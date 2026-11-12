@@ -54,3 +54,7 @@ The plugin provides **complete UI catalogs in all 12 MissionBay languages**: `ar
 Each game action checks the trusted host identity and requires an explicit positive `IAuthorizationService` decision. Source checking, version 11.5 and 12.5 PHPUnit tests, local smoke tests and actual host/browser checks are described in [test/README.md](test/README.md). This source package alone does not establish compatibility with the deployed model or live MySQL, ILIAS, accessibility, or concurrency behavior.
 
 Read [PRIVACY.md](PRIVACY.md) for actual storage and provider boundaries.
+
+## Historical migration readiness
+
+The existing migration classes in this plugin now implement the independent `ILegacyDatabaseMigration` marker and declare `down(): void` that throws `MigrationException('Not implemented')`. This is not a working reverse migration. Existing `up()` behavior, migration identities, versions, and providers are unchanged. The BASE3 runner skips only the stored checksum comparison for already-applied marked migrations; unapplied migrations still run forward and are recorded in `base3_migrations`. No database data or historical records are modified by this source update. The marker may be removed after the stored checksum has been deliberately reconciled with the final unmarked source file.
