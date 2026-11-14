@@ -1,22 +1,37 @@
 <?php declare(strict_types=1);
 
-namespace Blindspot\Test\Output;
+/***********************************************************************
+ * This file is part of Blindspot for BASE3 Framework.
+ *
+ * Blindspot provides a conversational AI confrontation game for BASE3.
+ * It owns match rules, game history and the interactive display.
+ * Agents execute through the existing AssistantFoundation contracts.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use AssistantFoundation\Api\IAgentConfigurationService;
-use AssistantFoundation\Api\IAgentExecutionService;
-use Base3\Api\IMvcView;
-use Base3\Api\IRequest;
-use Base3\Authorization\Api\IAuthorizationService;
-use Base3\Authorization\Dto\AuthorizationDecision;
-use Base3\Database\Api\IDatabase;
-use Base3\Usermanager\Api\IUsermanager;
-use Base3\Usermanager\User;
-use Blindspot\Output\BlindspotApiOutput;
-use Blindspot\Repository\BlindspotMatchRepository;
-use Blindspot\Service\BlindspotAccessService;
-use Blindspot\Service\BlindspotAgentService;
-use Blindspot\Service\BlindspotGameService;
-use Blindspot\Test\Fixture\RecordingDatabase;
+
+namespace Base3\Blindspot\Test\Output;
+
+use Base3\AssistantFoundation\Api\IAgentConfigurationService;
+use Base3\AssistantFoundation\Api\IAgentExecutionService;
+use Base3\CoreFoundation\Api\IMvcView;
+use Base3\CoreFoundation\Api\IRequest;
+use Base3\CoreFoundation\Authorization\Api\IAuthorizationService;
+use Base3\CoreFoundation\Authorization\Dto\AuthorizationDecision;
+use Base3\CoreFoundation\Database\Api\IDatabase;
+use Base3\CoreFoundation\Usermanager\Api\IUsermanager;
+use Base3\CoreFoundation\Usermanager\User;
+use Base3\Blindspot\Output\BlindspotApiOutput;
+use Base3\Blindspot\Repository\BlindspotMatchRepository;
+use Base3\Blindspot\Service\BlindspotAccessService;
+use Base3\Blindspot\Service\BlindspotAgentService;
+use Base3\Blindspot\Service\BlindspotGameService;
+use Base3\Blindspot\Test\Fixture\RecordingDatabase;
 use PHPUnit\Framework\TestCase;
 
 final class BlindspotApiOutputTest extends TestCase {

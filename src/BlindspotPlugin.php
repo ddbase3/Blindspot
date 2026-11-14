@@ -1,18 +1,33 @@
 <?php declare(strict_types=1);
 
-namespace Blindspot;
+/***********************************************************************
+ * This file is part of Blindspot for BASE3 Framework.
+ *
+ * Blindspot provides a conversational AI confrontation game for BASE3.
+ * It owns match rules, game history and the interactive display.
+ * Agents execute through the existing AssistantFoundation contracts.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use AssistantFoundation\Api\IAgentConfigurationService;
-use AssistantFoundation\Api\IAgentExecutionService;
-use Base3\Api\IContainer;
-use Base3\Api\IPlugin;
-use Base3\Authorization\Api\IAuthorizationService;
-use Base3\Database\Api\IDatabase;
-use Base3\Usermanager\Api\IUsermanager;
-use Blindspot\Repository\BlindspotMatchRepository;
-use Blindspot\Service\BlindspotAccessService;
-use Blindspot\Service\BlindspotAgentService;
-use Blindspot\Service\BlindspotGameService;
+
+namespace Base3\Blindspot;
+
+use Base3\AssistantFoundation\Api\IAgentConfigurationService;
+use Base3\AssistantFoundation\Api\IAgentExecutionService;
+use Base3\CoreFoundation\Api\IContainer;
+use Base3\CoreFoundation\Api\IPlugin;
+use Base3\CoreFoundation\Authorization\Api\IAuthorizationService;
+use Base3\CoreFoundation\Database\Api\IDatabase;
+use Base3\CoreFoundation\Usermanager\Api\IUsermanager;
+use Base3\Blindspot\Repository\BlindspotMatchRepository;
+use Base3\Blindspot\Service\BlindspotAccessService;
+use Base3\Blindspot\Service\BlindspotAgentService;
+use Base3\Blindspot\Service\BlindspotGameService;
 
 /** Binds only game-owned services. The fixed agent, feature, display and migration are class-map discovered. */
 final class BlindspotPlugin implements IPlugin {

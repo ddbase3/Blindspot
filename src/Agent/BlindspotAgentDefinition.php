@@ -1,8 +1,23 @@
 <?php declare(strict_types=1);
 
-namespace Blindspot\Agent;
+/***********************************************************************
+ * This file is part of Blindspot for BASE3 Framework.
+ *
+ * Blindspot provides a conversational AI confrontation game for BASE3.
+ * It owns match rules, game history and the interactive display.
+ * Agents execute through the existing AssistantFoundation contracts.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use AssistantFoundation\Api\IAgentDefinition;
+
+namespace Base3\Blindspot\Agent;
+
+use Base3\AssistantFoundation\Api\IAgentDefinition;
 
 /** The configured agent and its knowledge documents remain owned by MissionBay. */
 final class BlindspotAgentDefinition implements IAgentDefinition {

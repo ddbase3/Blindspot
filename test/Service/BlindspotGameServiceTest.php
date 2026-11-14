@@ -1,21 +1,36 @@
 <?php declare(strict_types=1);
 
-namespace Blindspot\Test\Service;
+/***********************************************************************
+ * This file is part of Blindspot for BASE3 Framework.
+ *
+ * Blindspot provides a conversational AI confrontation game for BASE3.
+ * It owns match rules, game history and the interactive display.
+ * Agents execute through the existing AssistantFoundation contracts.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use AssistantFoundation\Dto\AgentExecutionResult;
-use Base3\Authorization\Api\IAuthorizationService;
-use Base3\Authorization\Dto\AuthorizationDecision;
-use Base3\Usermanager\Api\IUsermanager;
-use Base3\Usermanager\User;
-use Blindspot\Game\BlindspotRules;
-use Blindspot\Repository\BlindspotMatchRepository;
-use Blindspot\Service\BlindspotAccessService;
-use Blindspot\Service\BlindspotAgentService;
-use Blindspot\Service\BlindspotGameService;
-use Blindspot\Test\Fixture\FakeAgentConfiguration;
-use Blindspot\Test\Fixture\FakeAgentExecution;
-use Blindspot\Test\Fixture\MatchData;
-use Blindspot\Test\Fixture\RecordingDatabase;
+
+namespace Base3\Blindspot\Test\Service;
+
+use Base3\AssistantFoundation\Dto\AgentExecutionResult;
+use Base3\CoreFoundation\Authorization\Api\IAuthorizationService;
+use Base3\CoreFoundation\Authorization\Dto\AuthorizationDecision;
+use Base3\CoreFoundation\Usermanager\Api\IUsermanager;
+use Base3\CoreFoundation\Usermanager\User;
+use Base3\Blindspot\Game\BlindspotRules;
+use Base3\Blindspot\Repository\BlindspotMatchRepository;
+use Base3\Blindspot\Service\BlindspotAccessService;
+use Base3\Blindspot\Service\BlindspotAgentService;
+use Base3\Blindspot\Service\BlindspotGameService;
+use Base3\Blindspot\Test\Fixture\FakeAgentConfiguration;
+use Base3\Blindspot\Test\Fixture\FakeAgentExecution;
+use Base3\Blindspot\Test\Fixture\MatchData;
+use Base3\Blindspot\Test\Fixture\RecordingDatabase;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 

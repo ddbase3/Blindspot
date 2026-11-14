@@ -1,11 +1,26 @@
 <?php declare(strict_types=1);
 
-namespace Blindspot\Test\Fixture;
+/***********************************************************************
+ * This file is part of Blindspot for BASE3 Framework.
+ *
+ * Blindspot provides a conversational AI confrontation game for BASE3.
+ * It owns match rules, game history and the interactive display.
+ * Agents execute through the existing AssistantFoundation contracts.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use AssistantFoundation\Api\IAgentEventSink;
-use AssistantFoundation\Api\IAgentExecutionService;
-use AssistantFoundation\Dto\AgentExecutionRequest;
-use AssistantFoundation\Dto\AgentExecutionResult;
+
+namespace Base3\Blindspot\Test\Fixture;
+
+use Base3\AssistantFoundation\Api\IAgentEventSink;
+use Base3\AssistantFoundation\Api\IAgentExecutionService;
+use Base3\AssistantFoundation\Dto\AgentExecutionRequest;
+use Base3\AssistantFoundation\Dto\AgentExecutionResult;
 
 /** Records Foundation requests; responses may be queued for successive agent tasks. */
 final class FakeAgentExecution implements IAgentExecutionService {

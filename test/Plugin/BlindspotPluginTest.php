@@ -1,13 +1,28 @@
 <?php declare(strict_types=1);
 
-namespace Blindspot\Test\Plugin;
+/***********************************************************************
+ * This file is part of Blindspot for BASE3 Framework.
+ *
+ * Blindspot provides a conversational AI confrontation game for BASE3.
+ * It owns match rules, game history and the interactive display.
+ * Agents execute through the existing AssistantFoundation contracts.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use Base3\Api\IContainer;
-use Blindspot\BlindspotPlugin;
-use Blindspot\Repository\BlindspotMatchRepository;
-use Blindspot\Service\BlindspotAccessService;
-use Blindspot\Service\BlindspotAgentService;
-use Blindspot\Service\BlindspotGameService;
+
+namespace Base3\Blindspot\Test\Plugin;
+
+use Base3\CoreFoundation\Api\IContainer;
+use Base3\Blindspot\BlindspotPlugin;
+use Base3\Blindspot\Repository\BlindspotMatchRepository;
+use Base3\Blindspot\Service\BlindspotAccessService;
+use Base3\Blindspot\Service\BlindspotAgentService;
+use Base3\Blindspot\Service\BlindspotGameService;
 use PHPUnit\Framework\TestCase;
 
 final class BlindspotPluginTest extends TestCase {

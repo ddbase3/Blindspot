@@ -1,10 +1,25 @@
 <?php declare(strict_types=1);
 
-namespace Blindspot\Migration;
+/***********************************************************************
+ * This file is part of Blindspot for BASE3 Framework.
+ *
+ * Blindspot provides a conversational AI confrontation game for BASE3.
+ * It owns match rules, game history and the interactive display.
+ * Agents execute through the existing AssistantFoundation contracts.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use Base3\Api\IContainer;
-use Base3\Database\Api\IDatabase;
-use Base3\Migration\Api\IDatabaseMigrationProvider;
+
+namespace Base3\Blindspot\Migration;
+
+use Base3\CoreFoundation\Api\IContainer;
+use Base3\CoreFoundation\Database\Api\IDatabase;
+use Base3\CoreFoundation\Migration\Api\IDatabaseMigrationProvider;
 
 /** Activates only when the selected BASE3 host binds the existing database service. */
 final class BlindspotMatchMigrationProvider implements IDatabaseMigrationProvider {

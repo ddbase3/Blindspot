@@ -1,10 +1,25 @@
 <?php declare(strict_types=1);
 
-namespace Blindspot\Authorization;
+/***********************************************************************
+ * This file is part of Blindspot for BASE3 Framework.
+ *
+ * Blindspot provides a conversational AI confrontation game for BASE3.
+ * It owns match rules, game history and the interactive display.
+ * Agents execute through the existing AssistantFoundation contracts.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use Base3\Api\IMvcView;
-use Base3\Authorization\Api\IFeature;
-use Base3\Usermanager\Permission;
+
+namespace Base3\Blindspot\Authorization;
+
+use Base3\CoreFoundation\Api\IMvcView;
+use Base3\CoreFoundation\Authorization\Api\IFeature;
+use Base3\CoreFoundation\Usermanager\Permission;
 use RuntimeException;
 
 /** Describes the playable feature for the existing BASE3 authorization authority. */
