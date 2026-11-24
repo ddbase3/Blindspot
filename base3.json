@@ -2,11 +2,19 @@
 	"manifestVersion": 1,
 	"name": "Blindspot",
 	"namespace": "Base3\\Blindspot",
-	"version": "0.4.0",
+	"version": "5.0.0",
 	"description": "Open-ended conversational AI confrontation game for BASE3.",
 	"license": "GPL-3.0-or-later",
+	"maintainers": [
+		{
+			"name": "Daniel Dahme",
+			"url": "https://www.base3.de",
+			"email": "info@base3.de"
+		}
+	],
+	"repository": "https://github.com/ddbase3/Blindspot",
 	"dependencies": {
-		"AssistantFoundation": ">=4.18.0",
-		"CoreFoundation": ">=4.10.0"
+		"AssistantFoundation": ">=5.0.0",
+		"CoreFoundation": ">=5.0.0"
 	}
 }
